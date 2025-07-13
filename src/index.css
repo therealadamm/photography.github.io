@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Photography-focused color palette */
+    --background: 0 0% 98%;
+    --foreground: 20 14% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 4%;
+
+    /* Warm golden primary for photography brand */
+    --primary: 35 84% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 42 96% 65%;
+
+    /* Sophisticated neutrals */
+    --secondary: 20 6% 90%;
+    --secondary-foreground: 20 14% 4%;
+
+    --muted: 20 6% 95%;
+    --muted-foreground: 20 5% 64%;
+
+    --accent: 35 84% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 6% 90%;
+    --input: 20 6% 90%;
+    --ring: 35 84% 55%;
+
+    /* Photography-specific design tokens */
+    --hero-overlay: 20 14% 4% / 0.4;
+    --gallery-hover: 35 84% 55% / 0.1;
+    
+    /* Beautiful gradients */
+    --gradient-hero: linear-gradient(135deg, 20 14% 4% / 0.8, 20 14% 4% / 0.4);
+    --gradient-accent: linear-gradient(135deg, hsl(35 84% 55%), hsl(42 96% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(20 6% 95%));
+    
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 20px hsl(20 14% 4% / 0.1);
+    --shadow-elegant: 0 10px 40px hsl(20 14% 4% / 0.15);
+    --shadow-glow: 0 0 30px hsl(35 84% 55% / 0.3);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with photography aesthetics */
+    --background: 20 14% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 20 8% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 20 8% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 42 96% 65%;
+    --primary-foreground: 20 14% 4%;
+    --primary-glow: 35 84% 55%;
+
+    --secondary: 20 8% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 20 8% 12%;
+    --muted-foreground: 20 5% 64%;
+
+    --accent: 42 96% 65%;
+    --accent-foreground: 20 14% 4%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 8% 12%;
+    --input: 20 8% 12%;
+    --ring: 42 96% 65%;
+
+    /* Dark mode specific tokens */
+    --hero-overlay: 20 14% 4% / 0.6;
+    --gallery-hover: 42 96% 65% / 0.15;
+    
+    --gradient-hero: linear-gradient(135deg, 20 14% 4% / 0.9, 20 14% 4% / 0.5);
+    --gradient-accent: linear-gradient(135deg, hsl(42 96% 65%), hsl(35 84% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(20 14% 4%), hsl(20 8% 8%));
+    
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-elegant: 0 10px 40px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 30px hsl(42 96% 65% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
